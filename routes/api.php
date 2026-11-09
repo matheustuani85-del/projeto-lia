@@ -40,4 +40,4 @@ Route::post('/salvar_cardapio', [CardapioController::class, 'salvar_cardapio']);
 Route::delete('/deletar_cardapio', [CardapioController::class, 'deletar_cardapio'])->name('cardapio.deletar');
 Route::put('/alterar_cardapio', [CardapioController::class, 'alterar_cardapio'])->name('cardapio.alterar');
 Route::get('/ver_cardapios', [CardapioController::class, 'ver_cardapios'])->name('cardapio.listar');
-
+''
