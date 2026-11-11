@@ -29,10 +29,5 @@ Route::get('/fale_com_a_lia', [LiaController::class, 'index'])->name('fale_com_a
 Route::get('/sobre', [SobreController::class, 'index'])->name('sobre');
 Route::get('/quiz', [QuizCardapioController::class, 'index'])->name('quiz');
 Route::get('/solicitacao-de-troca', [SolicitacaoController::class, 'index'])->name('solicitacao_de_troca');
-Route::redirect('/solicitacao_de_troca', '/solicitacao-de-troca');
-
-Route::middleware('throttle:5,1')->group(function () {
-    Route::post('/contato', [ContatoController::class, 'enviar'])->name('contato.enviar');
-    Route::post('/falar-com-a-cozinha', [ContatoController::class, 'enviar'])->name('contato.cozinha.enviar');
-    Route::post('/solicitacao-de-troca', [SolicitacaoController::class, 'store'])->name('solicitacao_de_troca.store');
-});
+Route::get('/solicitacao-de-troca/confirmacao', [SolicitacaoController::class, 'confirmacao'])->name('solicitacao_de_troca.confirmacao');
+Route::get('Login', [LoginController::class, 'Login'])->name('login_funcionario');
